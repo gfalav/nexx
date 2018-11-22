@@ -1,0 +1,1 @@
+rails g scaffold User firstname:string lastname:string email:string password:digest jobtitle:string officephone:string celphone:string address:text country:string twitter:string facebook:string googleplus:string website:string photousr:string

@@ -20,4 +20,8 @@ body {
 	margin-right: 8px;
 }
 
+.topbar {
+		padding: 0px;
+}
+
 @import "bootstrap";

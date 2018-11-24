@@ -11,82 +11,120 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :firstname %>
-    <%= form.text_field :firstname %>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :firstname %>
+        <%= form.text_field :firstname, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :lastname %>
+        <%= form.text_field :lastname, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :email %>
+        <%= form.text_field :email, class: "form-control" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :lastname %>
-    <%= form.text_field :lastname %>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :password %>
+        <%= form.password_field :password, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :password_confirmation %>
+        <%= form.password_field :password_confirmation, class: "form-control" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :jobtitle %>
+        <%= form.text_field :jobtitle, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :officephone %>
+        <%= form.text_field :officephone, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :celphone %>
+        <%= form.text_field :celphone, class: "form-control" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :address %>
+        <%= form.text_area :address, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :country %>
+        <%= form.text_field :country, class: "form-control" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation %>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :twitter %>
+        <%= form.text_field :twitter, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :facebook %>
+        <%= form.text_field :facebook, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :googleplus %>
+        <%= form.text_field :googleplus, class: "form-control" %>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="form-group">
+        <%= form.label :website %>
+        <%= form.text_field :website, class: "form-control" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :jobtitle %>
-    <%= form.text_field :jobtitle %>
-  </div>
-
-  <div class="field">
-    <%= form.label :officephone %>
-    <%= form.text_field :officephone %>
-  </div>
-
-  <div class="field">
-    <%= form.label :celphone %>
-    <%= form.text_field :celphone %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_area :address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :country %>
-    <%= form.text_field :country %>
-  </div>
-
-  <div class="field">
-    <%= form.label :twitter %>
-    <%= form.text_field :twitter %>
-  </div>
-
-  <div class="field">
-    <%= form.label :facebook %>
-    <%= form.text_field :facebook %>
-  </div>
-
-  <div class="field">
-    <%= form.label :googleplus %>
-    <%= form.text_field :googleplus %>
-  </div>
-
-  <div class="field">
-    <%= form.label :website %>
-    <%= form.text_field :website %>
-  </div>
-
-  <div class="field">
-    <%= form.label :photousr %>
-    <%= form.text_field :photousr %>
+  <div class="form-group">
+    <%= form.label "Photo User" %>
+    <%= form.file_field :photousr, class: "btn btn-primary" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Send", class: "btn btn-danger" %>
   </div>
 <% end %>

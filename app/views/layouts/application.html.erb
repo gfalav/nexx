@@ -13,6 +13,14 @@
   </head>
 
   <body>
-    <%= yield %>
+
+    <div class="container-fluid topbar">
+      <%= render "layouts/topbar" %>
+    </div>
+    
+    <div class="container">
+      <%= yield %>
+    </div>
+
   </body>
 </html>

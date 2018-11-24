@@ -1,69 +1,66 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Firstname:</strong>
-  <%= @user.firstname %>
-</p>
+<div class="row">
+  <div class="col-sm">
+    <%= image_tag(@user.photousr_url.to_s) %><br>
+    <h1>
+      <%= @user.firstname + " " + @user.lastname%>  
+    </h1>    
+  </div>
+  <div class="col-sm compshow">
+    <h2>User Info</h2>
 
-<p>
-  <strong>Lastname:</strong>
-  <%= @user.lastname %>
-</p>
+    <p>
+      <strong>Email:</strong>
+      <%= @user.email %>
+    </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+    <p>
+      <strong>Jobtitle:</strong>
+      <%= @user.jobtitle %>
+    </p>
 
-<p>
-  <strong>Jobtitle:</strong>
-  <%= @user.jobtitle %>
-</p>
+    <p>
+      <strong>Officephone:</strong>
+      <%= @user.officephone %>
+    </p>
 
-<p>
-  <strong>Officephone:</strong>
-  <%= @user.officephone %>
-</p>
+    <p>
+      <strong>Celphone:</strong>
+      <%= @user.celphone %>
+    </p>
 
-<p>
-  <strong>Celphone:</strong>
-  <%= @user.celphone %>
-</p>
+    <p>
+      <strong>Address:</strong>
+      <%= @user.address %>
+    </p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @user.address %>
-</p>
+    <p>
+      <strong>Country:</strong>
+      <%= @user.country %>
+    </p>
 
-<p>
-  <strong>Country:</strong>
-  <%= @user.country %>
-</p>
+    <p>
+      <strong>Twitter:</strong>
+      <%= @user.twitter %>
+    </p>
 
-<p>
-  <strong>Twitter:</strong>
-  <%= @user.twitter %>
-</p>
+    <p>
+      <strong>Facebook:</strong>
+      <%= @user.facebook %>
+    </p>
 
-<p>
-  <strong>Facebook:</strong>
-  <%= @user.facebook %>
-</p>
+    <p>
+      <strong>Googleplus:</strong>
+      <%= @user.googleplus %>
+    </p>
 
-<p>
-  <strong>Googleplus:</strong>
-  <%= @user.googleplus %>
-</p>
+    <p>
+      <strong>Website:</strong>
+      <%= @user.website %>
+    </p>
+  </div>
+</div>
 
-<p>
-  <strong>Website:</strong>
-  <%= @user.website %>
-</p>
-
-<p>
-  <strong>Photousr:</strong>
-  <%= @user.photousr %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-warning" %> |
+<%= link_to 'Back', users_path, class: "btn btn-secondary" %>

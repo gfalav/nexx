@@ -27,6 +27,37 @@
         <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
+
+    <% if logged_in? %>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <% if current_user.photousr_url == nil %>
+            <%= image_tag("user.png", :size=>'24x24') %>
+          <% else %>          
+            <%= image_tag(current_user.photousr_url.to_s, :size=>'24x24') %>
+          <% end %>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <%= link_to "Profile", logout_path, class: "dropdown-item" %>
+          <%= link_to "Log Out", logout_path, :method => :delete, :confirm => "You sure?", class: "dropdown-item" %>
+        </div>
+      </div>
+
+    <% else %>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= image_tag("user.png", :size=>'24x24') %>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <%= link_to "Log In", login_path, class: "dropdown-item" %>
+          <%= link_to "Sign Up", signup_path, class: "dropdown-item" %>
+        </div>
+      </div>
+
+    <% end %>
+
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
